@@ -871,6 +871,7 @@ function void TitleScreen()
 //  - First word ("size") is twice the number of objects in the table
 //  - After that, each entry is word per object, telling us the RAM address of a dynamic object (lower u16 part only)
 define global.dynamic_objects.size_new	= u16[0x8ae380]
+define global.dynamic_objects.size	= u16[0x8ae380] // this would be used by any mods above OriginsScreenResolution (assuming it is at the lowest priority) to fix potential crashes
 constant u32 global.dynamic_objects.array_newstartloc = 0x8ae380
 
 //# address-hook(0x01040c) end(0x01041c)
